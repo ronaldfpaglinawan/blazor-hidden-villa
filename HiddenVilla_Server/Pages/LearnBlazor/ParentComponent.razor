@@ -3,12 +3,19 @@
 
 <h3 class="text-danger">Parent Child Component</h3>
 
-<ChildComponent Title="This title is passed as parameter from Parent Component">
-    Render Fragment From Parent! WooHOO!
+<ChildComponent OnClickBtnMethod="ShowMessage" Title="This title is passed as parameter from Parent Component">
+    @*<ChildContent>Render Fragment From Parent! WooHOO!</ChildContent>*@
+    <DangerChildContent>Danger Content from Render Fragment! WooHOO!</DangerChildContent>
 </ChildComponent>
 
-<ChildComponent Title="This is second child component">
-</ChildComponent>
+<p><b>@messageText</b></p>
+
+
 @code {
+    private string messageText = "";
 
+    private void ShowMessage(MouseEventArgs e)
+    {
+        messageText = "Blazzing text from parent";
+    }
 }
