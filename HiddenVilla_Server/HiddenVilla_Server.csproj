@@ -9,4 +9,9 @@
     <Folder Include="Pages\LearnBlazor\" />
     <Folder Include="Pages\LearnBlazor\LearnBlazorComponent\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataAccess\DataAccess.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
 </Project>
